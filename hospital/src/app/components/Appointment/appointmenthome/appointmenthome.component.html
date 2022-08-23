@@ -1,0 +1,93 @@
+
+<div class="card">
+    <div class="card-header">
+        BOOK Appointment !!
+      </div>
+  <form [formGroup]="Form" (submit)="onPost()" >
+    <fieldset>
+        <br>
+      <legend><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+        <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+        <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+      </svg> &nbsp;Requesting For </legend>    
+<br>
+
+          <label *ngIf="did==6">Charges Of Appointment:&nbsp;50$</label>
+          <label *ngIf="did==7">Charges Of Appointment:&nbsp;60$</label>
+          <label  *ngIf="did==8">Charges Of Appointment:&nbsp;30$</label>
+          <label  *ngIf="did==9">Charges Of Appointment:&nbsp;20$</label>
+          <br>
+          <br>
+      <label>
+        
+        &nbsp;&nbsp;&nbsp;&nbsp; Name:&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="text" name="name" formControlName="name" required>
+      </label>
+      <br>
+      <br>
+      <div class="two-cols">
+        <label>
+            &nbsp;&nbsp;&nbsp;&nbsp; Cause:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <input type="text" name="problem" formControlName="problem" required>
+        </label>
+        <br>
+        <br>
+        <label>
+            &nbsp;&nbsp;&nbsp;&nbsp; Phone: &nbsp;&nbsp;&nbsp;
+          <input type="tel" name="phone" formControlName="phone">
+        </label>
+      </div>
+    </fieldset>
+    <br>
+
+    <fieldset>
+        <legend> <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-card-checklist" viewBox="0 0 16 16">
+            <path d="M14.5 3a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h13zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-13z"/>
+            <path d="M7 5.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm-1.496-.854a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 1 1 .708-.708l.146.147 1.146-1.147a.5.5 0 0 1 .708 0zM7 9.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm-1.496-.854a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 0 1 .708-.708l.146.147 1.146-1.147a.5.5 0 0 1 .708 0z"/>
+          </svg>&nbsp;&nbsp;Appointment request</legend>
+      <br>
+      <br>
+      <div class="two-cols">
+        <label>
+            &nbsp;&nbsp;&nbsp;&nbsp;  Date
+          <input type="date" name="Appointment request" formControlName="date"required>
+        </label>
+        <br>
+        <br>
+        <!--drop down list of specilization-->
+      
+        
+        <div class="inline">
+          <label>Avalible in Time:</label> 
+            &nbsp; <label *ngIf="did==6||did==9">
+            <input type="radio" id="age2"  value="morning" formControlName="morning">
+            Morning[9Am-11Am]
+          </label>
+          <label *ngIf="did==7">
+            <input type="radio" id="age3"  value="afternoon" formControlName="afternoon">
+            Afternoon[1Pm-3Pm]
+          </label>
+          <label *ngIf="did==8">
+            <input type="radio" id="age4"  value="evening" formControlName="evening">
+            Evening[6Pm-8Pm]
+          </label>
+          &nbsp;
+          <label *ngIf="did==9||did==7">
+            <input type="radio" id="age4"  value="night" formControlName="night">
+            Night[9Pm-10Pm]
+          </label>
+
+        </div>
+
+        
+      </div>
+     
+    </fieldset>
+    <br>
+    <br>
+     
+    &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;<input type="submit" value="Submit request" >
+    <br>
+    <br>
+  </form>
+</div>

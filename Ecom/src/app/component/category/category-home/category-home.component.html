@@ -1,0 +1,17 @@
+<div class="alert alert-primary" role="alert" *ngIf="errorMsg">
+    {{errorMsg}}
+  </div>
+  
+  <div class="row">
+    <div class="col-sm-3" *ngFor="let c of categories">
+      <div class="card" >
+        <div class="card-body">
+          <h5 class="card-title">{{c.name}}</h5>
+  
+          <a href="Javascript.void(0)" routerLink="/product/{{c.id}}" class="card-link">View All Products</a>
+  
+        </div>
+      </div>
+    </div>
+  
+  </div>

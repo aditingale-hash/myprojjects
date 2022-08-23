@@ -1,0 +1,69 @@
+
+<nav class="navbar navbar-expand-lg navbar-teal bg-light">
+    <div class="container-fluid">
+      
+            <img src="https://media-exp1.licdn.com/dms/image/C5622AQGYWkp83Phg8Q/feedshare-shrink_2048_1536/0/1641226740028?e=1649894400&v=beta&t=ZJuZOxavU8i2rkkui9HAPdWs4yyShn7qGjotKwR5iHQ" alt="Logo Image" height="40px" width="100px">
+        
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+              &nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="#" class="btn  btn-sm ">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="black" class="bi bi-house-fill" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="m8 3.293 6 6V13.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5V9.293l6-6zm5-.793V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"/>
+                    <path fill-rule="evenodd" d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z"/>
+                  </svg>
+              </a>
+          </li>
+          &nbsp;&nbsp;&nbsp;
+          <li class="nav-item dropdown">
+            <a class="btn  btn-sm dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="font-size: medium;">
+              Categories
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li *ngIf="errorMsg">{{errorMsg}}</li>
+               <li *ngFor="let cat of categories">
+              
+              <a class="dropdown-item" href="Javascript.void(0)" routerLink="/product/{{cat.id}}">{{cat.name}}
+              
+              </a>
+              
+              </li>
+              
+              </ul>
+        
+         
+        </ul>
+        <span  *ngIf="loggedIn" style="color: #020101;">
+          Welcome To Capgemini Store "{{username}}"!!
+          &nbsp;
+        </span>
+        <form class="d-flex">
+          <input class="form-control me-1" type="search" placeholder="Search" aria-label="Search">
+          <button type="button" class="btn btn-light">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+<path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"></path>
+</svg>    </button>
+        </form>
+        &nbsp;&nbsp;
+        <button type="button" class="btn btn-light ">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+<path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"></path>
+<path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"></path>
+</svg> </button>
+<span><a *ngIf="loggedIn" href="Javascript.void(0)" (click)="onLogOut()" routerLink="/">log out</a></span>
+&nbsp;
+<button type="button" class="btn btn-light">
+    <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-cart-check-fill" viewBox="0 0 16 16">
+<path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm-1.646-7.646-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L8 8.293l2.646-2.647a.5.5 0 0 1 .708.708z"></path>
+</svg>
+[{{count}}]</button>
+           
+
+          
+      </div>
+    </div>
+  </nav>

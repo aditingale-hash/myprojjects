@@ -1,0 +1,17 @@
+<div class="card">
+    <div class="card-header">
+       Post Precription !!
+      </div>
+  
+  <form (submit)="onFormSubmit()" [formGroup]="precriptionForm">
+    <br>
+    <label>tablets: </label>&nbsp;&nbsp;&nbsp;
+    <input type="text" name="tablets" required formControlName="tablets">
+    <br /><br />
+    <label>precaution: </label>&nbsp;&nbsp;&nbsp;
+    <input type="precaution" name="precaution" required formControlName="precaution">
+    <br /><br />
+    <input type="submit" value="Precribe">
+  </form>
+  </div>
+  

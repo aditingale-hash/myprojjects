@@ -1,0 +1,19 @@
+
+<div class="card">
+    <div class="card-header">
+        Admin Login !!
+      </div>
+  <span *ngIf="errorMsg">{{errorMsg}}</span>
+  <form (submit)="onFormSubmit()" [formGroup]="loginForm">
+    <br>
+    <label>Username: </label>&nbsp;&nbsp;&nbsp;
+    <input type="text" name="username" required formControlName="username">
+    <br /><br />
+    <label>Password: </label>&nbsp;&nbsp;&nbsp;
+    <input type="password" name="password" required formControlName="password">
+    <br /><br />
+    <input type="submit" value="LOGIN">
+  </form>
+  </div>
+  
+  
